@@ -5,20 +5,22 @@
  */
 Ext.define('AmsMain.Application', {
     extend: 'Ext.app.Application',
-    requires:[
-       'AmsAuth.util.Authentification',
-       'AmsData.data.proxy.SecureRestProxy',       
-       'Ext.grid.*',
-       'Ext.form.field.*'
+    requires: [
+        'AmsAuth.util.Authentification',
+        'AmsData.data.proxy.SecureRestProxy',
+        'Ext.grid.*',
+        'Ext.form.field.*'
     ],
     name: 'AmsMain',
-
+    getVersion: function ()
+    {
+        return "1.0";
+    },
     stores: [
-       'AmsMain.store.Theme',
-       'AmsMain.store.Tree'
-        // TODO: add global / shared stores here
+        'AmsMain.store.Theme',
+        'AmsMain.store.Tree'
+                // TODO: add global / shared stores here
     ],
-    
     launch: function () {
         // TODO - Launch the application
     }

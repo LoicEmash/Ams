@@ -7,7 +7,10 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\DependencyInjection\ContainerAware;
 
 class AuthenticateController extends ContainerAware {
-
+    public function getVersion()
+    {
+        return "1.0";
+    }
     public function loginAction($login, $password) {
 
         $em = $this->container->get('doctrine')->getEntityManager();

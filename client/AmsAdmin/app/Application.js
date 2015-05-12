@@ -10,6 +10,10 @@ Ext.define('AmsAdmin.Application', {
         'Ext.grid.*',
         'Ext.form.field.*'
     ],
+    getVersion : function()
+    {
+        return "1.0";
+    },
     name: 'AmsAdmin',
     /*
      * Liste des stores globaux
